@@ -112,7 +112,8 @@
 
     #TableOfContents > ul > li {
       color: $color-text;
-      font-size: .8rem;
+      //font-size: .8rem;
+      //font-size: 90%;
 
       &:before {
         color: $color-accent-1;

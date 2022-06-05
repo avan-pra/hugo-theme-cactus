@@ -99,7 +99,8 @@
     letter-spacing: .01em;
     font-weight: 200;
     font-style: normal;
-    font-size: .8rem;
+    //font-size: .8rem;
+    font-size: 90%;
 
     ul {
       line-height: 15px;
@@ -168,7 +169,8 @@
 
     nav > ul > li {
       color: $color-text;
-      font-size: .8rem;
+      font-size: 90%;
+      //font-size: .8rem;
 
       &:before {
         color: $color-accent-1;
