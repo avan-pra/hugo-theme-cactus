@@ -25,6 +25,18 @@
   {{- $styles := resources.Get "scss/style.scss" | resources.ExecuteAsTemplate "scss/style.scss" . | resources.ToCSS $options | resources.Fingerprint "sha512" }}
   <link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}"> 
 
+  <!-- Custom JS -->
+  {{ range .Site.Params.custom_js -}}
+    <script type="text/javascript">
+      var head = document.getElementsByTagName('head')[0];
+      document.addEventListener('DOMContentLoaded', function () {
+	var js = document.createElement("script");
+        js.type = "module";
+        js.src = "{{ . | absURL }}";
+        head.appendChild(js);
+      });
+    </script>
+  {{- end }}
   <!-- Custom CSS -->
   {{ range .Site.Params.css }} <link rel="stylesheet" href="{{ . | absURL }}"> {{ end }}
   {{ `
