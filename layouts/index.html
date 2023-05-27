@@ -1,6 +1,6 @@
 {{ define "main" }}
   <section id="about">
-    <div class="window">  
+    <div class="window" id="window">  
       <div class="window_header">
         <div class="window_title">avan@localhost</div>
         <div class="window_close_button"></div>
@@ -37,7 +37,9 @@
               {{ end }}
             {{ end }}
           </div>
-          <br><b>[/home/avan] ></b> <span class="blink">_</span>
+          <br><b>[/home/avan] ></b>
+		  <span id="terminalinput"></span>
+		  <span id="blinkchar" class="blink">_</span>
 	    </div>
 	  </div>
   {{ end }}
